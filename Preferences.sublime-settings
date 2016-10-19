@@ -1,7 +1,5 @@
 {
-	"always_show_minimap_viewport": true,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
-	"draw_minimap_border": true,
 	"font_face": "Inconsolata",
 	"font_size": 16,
 	"ignored_packages":
@@ -13,21 +11,18 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		80
 	],
 	"tab_size": 4,
-	"theme": "Cyanide.sublime-theme",
+	"theme": "Solarized Space Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
 	"word_wrap": false,
-	"icon_file_type_enable": true,
-	"spacefunk_folder_icons": true,
-	"contrasted_sidebar": true,
-	"contrasted_tabs": true,
-	"contrasted_quick_panel": false,
-	"inconsolata_ui": false,
-	"large_scroll_bars": true
+	"hide_sidebar_icons": false,
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"enable_tab_scrolling": true,
+	"overlay_scroll_bars": "enabled",
 }
