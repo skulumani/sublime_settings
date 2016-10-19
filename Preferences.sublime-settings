@@ -1,6 +1,5 @@
 {
 	"always_show_minimap_viewport": true,
-	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 	"draw_minimap_border": true,
 	"font_face": "Inconsolata",
@@ -19,11 +18,16 @@
 	[
 		80
 	],
-	"soda_classic_tabs": true,
-	"soda_folder_icons": true,
 	"tab_size": 4,
-	"theme": "Seti.sublime-theme",
+	"theme": "Cyanide.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
-	"word_wrap": false
+	"word_wrap": false,
+	"icon_file_type_enable": true,
+	"spacefunk_folder_icons": true,
+	"contrasted_sidebar": true,
+	"contrasted_tabs": true,
+	"contrasted_quick_panel": false,
+	"inconsolata_ui": false,
+	"large_scroll_bars": true
 }
