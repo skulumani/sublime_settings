@@ -1,6 +1,8 @@
 {
 	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"draw_minimap_border": true,
 	"font_face": "Inconsolata",
 	"font_size": 16,
 	"ignored_packages":
