@@ -10,9 +10,9 @@
 	"font_face": "Inconsolata",
 	"font_size": 16,
 	"hide_sidebar_icons": false,
-	"icon_file_type_enable": true,
-	"highlight_line":true,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
 		"Vintage"
