@@ -12,6 +12,7 @@
 	"hide_sidebar_icons": false,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"hot_exit": false,
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
@@ -32,6 +33,5 @@
 	"theme": "Cyanide.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
-	"word_wrap": false,
-	"hot_exit": false
+	"word_wrap": false
 }
