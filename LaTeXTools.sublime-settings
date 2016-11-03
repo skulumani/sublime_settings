@@ -90,7 +90,7 @@
 	// "all"       to show a phantom for each math environment
 	// "selected"  to show a phantom only for the currently selected math environment
 	// "none"      to disable math live preview
-	"preview_math_mode": "selected",
+	"preview_math_mode": "none",
 
 	// The program to compile the latex template files, possible values are
 	// pdflatex, xelatex, lualatex, latex
@@ -135,7 +135,7 @@
 	"preview_math_density": 600,
 	// If the image is not sharp enough increase this scale to get a better resolution.
 	// However also change the density by the same factor to keep the size.
-	"preview_math_scale_quotient": 2,
+	"preview_math_scale_quotient": 3,
 
 	// IMAGE PREVIEW
 
