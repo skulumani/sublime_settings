@@ -116,7 +116,8 @@
 		"\\usepackage{amsmath}",
 		"\\usepackage{amssymb}",
 		"\\usepackage{latexsym}",
-		"\\usepackage{mathtools}"
+		"\\usepackage{mathtools}",
+		"\\usepackage{my_packages}"
 	],
 
 	// An string of the remaining preamble (not packages) for the file,
