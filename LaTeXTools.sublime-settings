@@ -23,6 +23,13 @@
 	// You can also use toggle: C-l,t,a,e
 	"env_auto_trigger": false,
 
+	// Fill-helper autocompletion trigger for glossary entries \gls{ and \acrfull{
+	"glossary_auto_trigger": true,
+
+	// Fill-helper autocompletion trigger for tex directive values after TEX directive=
+	// You can also use toggle: C-l,t,a,d
+	"tex_directive_auto_trigger": true,
+
 	// Controls whether the various fill-helpers should try to insert a
 	// completing }, ], or ) when inserted and either the C-l,C-f or C-l,x
 	// keybindings were used to trigger the completion. This attempts to be smart
@@ -34,9 +41,13 @@
 	// Keep focus on Sublime Text after building (true) or switch to PDF viewer (false)
 	// If you are on Windows or Linux and using ST2, you may need to set the
 	// "sublime_executable" setting for this to work in your platform settings.
-	"keep_focus": false,
+	"keep_focus": true,
 	// Sync PDF to current editor position after building (true) or not
 	"forward_sync": true,
+
+	// Set this to false to disable the overwriting of the goto overlay for the hotkey `C-r`
+	// You can still access the "table of content quickpanel" via `C-l, C-r`
+	"overwrite_goto_overlay": true,
 
 	// When to trigger cwl-command completion (requires the LaTeX-cwl package)
 	// possible values are:
@@ -56,7 +67,7 @@
 	// can also be set on a per-project basis
 	"use_biblatex": false,
 
-	// the mapping from the locales to the dictionaries for the 
+	// the mapping from the locales to the dictionaries for the
 	// `%!TEX spellcheck` directive, where the locales must be all lowercase
 	// and separated by a minus sign (-). The dictionaries must be valid path
 	// and compatible with the ST integrated spellcheck
@@ -70,14 +81,100 @@
 	"word_count_sub_level": "none",
 
 // ------------------------------------------------------------------
+// Preview settings
+// ------------------------------------------------------------------
+
+	// MATH LIVE PREVIEW
+
+	// The preview mode for math live preview, possible values are:
+	// "all"       to show a phantom for each math environment
+	// "selected"  to show a phantom only for the currently selected math environment
+	// "none"      to disable math live preview
+	"preview_math_mode": "selected",
+
+	// The program to compile the latex template files, possible values are
+	// pdflatex, xelatex, lualatex, latex
+	// DON'T(!) use tex engines like pdftex
+	"preview_math_latex_compile_program": "pdflatex",
+
+	// The color of the text in the preview math phantoms.
+	// The format can either be RGB based "#RRGGBB" (e.g. "#FFFF00") 
+	// or a color name (e.g. "yellow")
+	// If it is the empty string "" it will be guessed based in the color scheme.
+	"preview_math_color": "",
+
+	// The background color of the preview math phantoms.
+	// In contrast to the foreground color you may also edit your colorscheme to change this.
+	// The format can either be RGB(A) based "#RRGGBB" (e.g. "#0000FF50")
+	// or a color name (e.g. "blue")
+	// If it is the empty string "" the default color will be used.
+	"preview_math_background_color": "",
+
+	// An array of the used packages, from which the file for the live preview
+	// will be generated.
+	"preview_math_template_packages": [
+		"\\usepackage{amsmath}",
+		"\\usepackage{amssymb}",
+		"\\usepackage{latexsym}",
+		"\\usepackage{mathtools}"
+	],
+
+	// An string of the remaining preamble (not packages) for the file,
+	// which generates the math live preview.
+	// Can also be an array, with an string for each line (as in the packages).
+	"preview_math_template_preamble": "",
+
+	// The preview functionality by default appends a star (*) to each
+	// math environments, since we cannot and want not track the
+	// equation numbers. This may not be possible with each environment,
+	// therefore you can create a blacklist of such environments here.
+	"preview_math_no_star_envs": [],
+
+	// The density of the preview image. The higher the density the bigger the phantom.
+	"preview_math_density": 300,
+	// If the image is not sharp enough increase this scale to get a better resolution.
+	// However also change the density by the same factor to keep the size.
+	"preview_math_scale_quotient": 2,
+
+	// IMAGE PREVIEW
+
+	// The preview mode for image preview, possible values are:
+	// "all"       to show a phantom for each includegraphics command
+	// "selected"  to show a phantom only for the currently selected includegraphics command
+	// "hover"     to show a popup if you hover over an includegraphics command
+	// "none"      to disable image preview
+	"preview_image_mode": "hover",
+
+	// The image size in the preview popup.
+	// These are the outer dimensions of the maximal size.
+	// The image will be scaled down to fit into these dimensions.
+	// It can either be an number or an array, which consist of two numbers
+	// e.g. [200, 150]
+	"preview_popup_image_size": 200,
+
+	// The image size in the preview phantoms.
+	// These are the outer dimensions of the maximal size.
+	// The image will be scaled down to fit into these dimensions.
+	// It can either be an number or an array, which consist of two numbers
+	// e.g. [200, 150]
+	"preview_phantom_image_size": 150,
+
+	// Increase this number to get a better resolution on high dpi displays.
+	// Control the thumbnail image size, which will be generated to preview
+	// images, that are not natively supported like pdf files.
+	// E.g. a image size of 300 with a scale of 2 will create a
+	// thumbnail with the size 600, which is scaled down in the popup.
+	"preview_image_scale_quotient": 1,
+
+// ------------------------------------------------------------------
 // Temporary file settings
 // ------------------------------------------------------------------
 	// Ends of the names of temporary files to be deleted
 	"temp_files_exts": [
 		".blg",".bbl",".aux",".log",".brf",".nlo",".out",".dvi",".ps",
 		".lof",".toc",".fls",".fdb_latexmk",".pdfsync",".synctex.gz",
-		".ind",".ilg",".idx", ".loa",".lom",".lot",".lox",".lop",
-		".bcf",".nav",".run.xml",".snm"
+		".ind",".ilg",".idx",
+		".loa",".lom",".lat",".lox",".lop",".bcf",".nav",".run.xml",".snm"
 	],
 	// Folders that are not traversed when deleting temp files
 	"temp_files_ignored_folders": [
@@ -90,7 +187,7 @@
 
 	"osx": 	{
 		// Path used when invoking tex & friends; MUST include $PATH
-		"texpath" : "/Library/TeX/texbin:$PATH:/usr/texbin:/usr/local/bin:/opt/local/bin"
+		"texpath" : "$PATH:/Library/TeX/texbin:/usr/texbin:/usr/local/bin:/opt/local/bin"
 		// Path to PDF viewer, if needed
 		// TODO think about it. Also, maybe configure it here!
 	},
@@ -100,7 +197,7 @@
 		// Path used when invoking tex & friends; "" is fine for MiKTeX
 		// For TeXlive 2011 (or other years) use
 		// "texpath" : "C:\\texlive\\2011\\bin\\win32;$PATH",
-		"texpath" : "C:\\texlive\\2016\\bin\\win32;$PATH",
+		"texpath" : "",
 		// TeX distro: "miktex" or "texlive"
 		"distro" : "texlive",
 		// Command to invoke Sumatra. If blank, "SumatraPDF.exe" is used (it has to be on your PATH)
@@ -111,7 +208,7 @@
 		// how long (in seconds) to wait after the jump_to_pdf command completes
 		// before switching focus back to Sublime Text. This may need to be
 		// adjusted depending on your machine and configuration.
-		"keep_focus_delay": 1.0
+		"keep_focus_delay": 0.5
 	},
 
 	"linux" : {
@@ -241,15 +338,15 @@
 	// "default" or ""	the default built-in build engine; currently
 	//					this is the same as "traditional"
 	//
-	// "basic"			invokes pdflatex / xelatex / lualates as 
+	// "basic"			invokes pdflatex / xelatex / lualates as
 	//					needed, then biber / bibtex and pdflatex /
 	//					xelatex / lualatex again if needed. Unlike
 	//					the "simple" builder this supports most of
 	//					LaTeXTools builder features.
 	//
 	// "script"			external script: invokes the set of commands
-	//					specified in the "script_commands" setting 
-	//					in the platform-specific part of the 
+	//					specified in the "script_commands" setting
+	//					in the platform-specific part of the
 	//					"builder_settings"
 	//
 	// "simple"			invokes pdflatex 1x or 2x as needed, then
@@ -266,7 +363,7 @@
 	// NOTE: custom builders CANNOT have the same name as an existing
 	// built-in build engine (including "default")
 
-	"builder": "basic",
+	"builder": "traditional",
 
 	// OPTION: "builder_path"
 	// If non-empty, specifies a path to a custom builder, relative to the
@@ -308,7 +405,7 @@
 	},
 
 // ------------------------------------------------------------------
-// Build panel settings
+// Build panel and phantoms settings
 // ------------------------------------------------------------------
 	// OPTION: "highlight_build_panel"
 	// adds syntax highlighting to the build panel so that errors, warnings, etc.
@@ -324,13 +421,27 @@
 	// "no_warnings" (only hide the panel if no warnings occur)
 	// "no_badboxes" (only hide the panel if no badbox messages occur when badboxes are enabled) and
 	// "never" (default, never hide the build panel)
-	"hide_build_panel": "no_errors",
+	"hide_build_panel": "no_badboxes",
 
 	// OPTION: "display_bad_boxes"
 	// controls whether or not to display any bad boxes in the build output
 	// if this is not set to true, the setting "no_badboxes" for
 	// "hide_build_panel" is equivalent to "no_warnings"
 	"display_bad_boxes": false,
+
+	// OPTION: "show_error_phantoms"
+	// (ST3, Build 3118+ only)
+	// level to show error phantoms in the file
+	// Possible values are:
+	// "none" (don't show any phantoms at all)
+	// "errors" (only show errors, which breaks the compilation)
+	// "warnings" (default, show errors and warnings)
+	// "badboxes" (show errors, warnings, and badboxes)
+	"show_error_phantoms": "warnings",
+
+	// number of seconds to display the "build succeeded" or "build failed"
+	// message
+	"build_finished_message_length": 2.0,
 
 // ------------------------------------------------------------------
 // Viewer settings
@@ -339,7 +450,7 @@
 	// Specifies which viewer to use
 	// Possible values:
 	//
-	// "default" or ""	the default viewer for your platform, which 
+	// "default" or ""	the default viewer for your platform, which
 	//					is sumatra on Windows, skim on OS X and
 	//					evince on linux
 	//
@@ -388,6 +499,12 @@
 	// unless explicitly launched using C-l,v or C-l,j
 	"open_pdf_on_build": true,
 
+	// OPTION: "disable_focus_hack"
+	// if set to true, this will stop LaTeXTools from attempting to steal focus
+	// from the viewer. NOTE: This does not mean that the *viewer* won't steal
+	// the focus, only that LaTeXTools won't try to steal the focus back.
+	"disable_focus_hack": false,
+
 // ------------------------------------------------------------------
 // Opening files included into the tex source code
 // ------------------------------------------------------------------
@@ -401,13 +518,13 @@
 // Bibliographic references
 // ------------------------------------------------------------------
 	// OPTION: "bibliography"
-	// Either a single  bibliography plugin to use or a list of plugins 
+	// Either a single  bibliography plugin to use or a list of plugins
 	// which will be executed in order, stopping after the first result
 	// found
 	//
 	// Possible values:
 	//
-	// "traditional" 		the default, regex-based bibliography 
+	// "traditional" 		the default, regex-based bibliography
 	//						parsing
 	//
 	// "new"				a newer parser which supports UTF-8 and
