@@ -175,7 +175,8 @@
 		".blg",".bbl",".aux",".log",".brf",".nlo",".out",".dvi",".ps",
 		".lof",".toc",".fls",".fdb_latexmk",".pdfsync",".synctex.gz",
 		".ind",".ilg",".idx",
-		".loa",".lom",".lat",".lox",".lop",".bcf",".nav",".run.xml",".snm"
+		".loa",".lom",".lat",".lox",".lop",".bcf",".nav",".run.xml",".snm",
+		".fdb_latexmk",".fls"
 	],
 	// Folders that are not traversed when deleting temp files
 	"temp_files_ignored_folders": [
