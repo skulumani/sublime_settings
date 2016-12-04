@@ -3,6 +3,7 @@
 	[
 		"Hohmann"
 	],
+	"autocomplete":false,
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"centurion_folder_icons": true,
