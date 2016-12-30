@@ -3,8 +3,8 @@
 	[
 		"Hohmann"
 	],
-	"auto_complete":false,
 	"always_show_minimap_viewport": true,
+	"auto_complete": false,
 	"bold_folder_labels": true,
 	"centurion_folder_icons": true,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
