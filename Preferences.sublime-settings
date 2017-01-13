@@ -38,5 +38,5 @@
 	"theme": "Cyanide.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
-	"word_wrap": true
+	"word_wrap": false
 }
