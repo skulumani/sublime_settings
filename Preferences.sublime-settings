@@ -29,6 +29,9 @@
 		"draw_active"
 	],
 	"large_scroll_bars": true,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_small_tab": true,
 	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
