@@ -37,7 +37,7 @@
 	"status_bar_brighter": true,
 	"tab_size": 4,
 	"tabs_medium": false,
-	"theme": "Cyanide.sublime-theme",
+	"theme": "Material Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
 	"word_wrap": false

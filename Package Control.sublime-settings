@@ -5,12 +5,17 @@
 	],
 	"installed_packages":
 	[
+		"Anaconda",
 		"BracketHighlighter",
 		"Git",
 		"LaTeXTools",
 		"Markdown Preview",
+		"Materialize",
 		"Package Control",
+		"Predawn",
+		"Seti_UI",
 		"SideBarEnhancements",
-		"Theme - Cyanide"
+		"Theme - Cyanide",
+		"Themr"
 	]
 }
