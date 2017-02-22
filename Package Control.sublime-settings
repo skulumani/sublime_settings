@@ -15,6 +15,9 @@
 		"rsub",
 		"Seti_UI",
 		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-chktex",
+		"SublimeLinter-flake8",
 		"Theme - Cyanide",
 		"Themr"
 	]
