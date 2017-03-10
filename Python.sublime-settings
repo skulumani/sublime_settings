@@ -8,5 +8,7 @@
   "smart_indent": true,
   "tab_size": 4,
   "translate_tabs_to_spaces": true,
-  "use_tab_stops": true
+  "use_tab_stops": true,
+  "auto_complete_triggers": [{"selector": "source.python", "characters": "."}],
+  "auto_complete_selector": "-",
 }
