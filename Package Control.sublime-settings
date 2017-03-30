@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Anaconda",
 		"BracketHighlighter",
 		"Git",
 		"LaTeXTools",
@@ -17,7 +18,6 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-chktex",
-		"SublimeLinter-flake8",
 		"Theme - Cyanide",
 		"Themr"
 	]
